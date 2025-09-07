@@ -37,6 +37,9 @@ public class AddBatch {
             pstmt.executeBatch();
             System.out.println("query executed successfully...");
 
+            scn.close();
+            pstmt.close();
+            con.close();
         } catch (ClassNotFoundException | SQLException e) {
             throw new RuntimeException(e);
         }
