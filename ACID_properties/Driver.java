@@ -29,6 +29,10 @@ public class Driver {
         System.out.println("Enter how many row to fill :");
         int n =  scn.nextInt();
 
+        /*
+        setAutoCommit() method takes a boolean value and by default it is true. So by setting its value false we can make sure
+        that the data can not be commited to database, until we call commit() method to commit all code into databse.
+         */
         con.setAutoCommit(false);
         while (n-->0){
             System.out.println("Enter id :");
